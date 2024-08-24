@@ -1,0 +1,214 @@
+body {
+    font-family: "Microsoft YaHei", "Times New Roman", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#fixed-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 10px 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#fixed-bar img {
+    width: 160px;
+    margin-right: 20px;
+}
+
+#fixed-bar span {
+    font-size: 19.2px;
+    font-weight: bold;
+}
+
+#steps-bar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #8DECB4;
+    color: black;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+}
+
+#steps-bar span {
+    font-size: 16.8px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#steps-bar span:hover {
+    background-color: #41B06E;
+    transform: translateY(-2.4px);
+}
+
+.separator {
+    width: 1.6px;
+    height: 32px;
+    background: linear-gradient(to bottom, #ffffff00, #ffffff, #ffffff00);
+}
+
+#main-container {
+    display: flex;
+    margin-top: 112px;
+    height: calc(100vh - 112px);
+    background-color: #ffffff;
+}
+
+#fixed-panel {
+    width: 27%;
+    padding: 20px 10%;
+    background-color: #ffffff;
+    position: fixed;
+    top: 112px;
+    left: 0;
+    height: calc(100vh - 112px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+}
+
+#content-container {
+    flex-grow: 1;
+    margin-left: 47%;
+    padding: 20px 10% 20px 0;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+
+#control-button-container {
+    margin-top: 1cm;
+    margin-bottom: 20px;
+}
+
+.play-pause-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 14.4px;
+    font-weight: bold;
+    margin: 8px 0;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.play-pause-button:hover {
+    background-color: #45a049;
+}
+
+.play-pause-button i {
+    margin-right: 8px;
+}
+
+#terminal {
+    background-color: #282c34;
+    color: #ffffff;
+    font-family: Consolas, monospace;
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    height: calc(100% - 240px - 3cm - 10%);
+    overflow-y: auto;
+    margin-top: 20px;
+    margin-bottom: 10%;
+}
+
+.terminal-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.terminal-content {
+    height: calc(100% - 24px);
+    overflow-y: auto;
+}
+
+#display {
+    width: 100%;
+    height: calc(100vh - 300px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1cm;
+}
+
+.progress-container {
+    width: 100%;
+    max-width: 100%;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin: 16px auto;
+    height: 16px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0;
+    transition: width 0.3s;
+    border-radius: 8px;
+}
+
+.progress-text {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+
+.grid-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.active-step {
+    background-color: #41B06E !important;
+    color: white !important;
+    font-weight: bold;
+    font-size: 17.6px !important;
+    transform: scale(1.24);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}

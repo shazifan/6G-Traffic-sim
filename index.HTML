@@ -1,0 +1,71 @@
+<!--
+ * @Author: Enaow
+ * @Date: 2024-08-23 17:50:42
+ * @FilePath: \2024.8.23\index.HTML
+ * @LastEditTime: 2024-08-24 12:44:38
+ * @Description: 
+ * @RunSuccessfully: 
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空天地一体化综合业务网全国重点实验室</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="fixed-bar">
+        <img src="images/logo.png" alt="西电大学校徽" id="logo">
+        <span>西安电子科技大学 · 空天地一体化综合业务网全国重点实验室</span>
+    </div>
+
+    <div id="steps-bar">
+        <span onclick="jumpToStep(1)">第1步: 场景生成</span>
+        <div class="separator"></div>
+        <span onclick="jumpToStep(2)">第2步: 交通仿真</span>
+        <div class="separator"></div>
+        <span onclick="jumpToStep(3)">第3步: 定向发布策略应用</span>
+        <div class="separator"></div>
+        <span onclick="jumpToStep(4)">第4步: 性能验证</span>
+    </div>
+
+    <div id="main-container">
+        <div id="fixed-panel">
+            <div id="control-button-container">
+                <button id="control-button-1" class="play-pause-button">
+                    <i class="fas fa-play"></i>
+                    <span>场景生成</span>
+                </button>
+                <button id="control-button-2" class="play-pause-button">
+                    <i class="fas fa-play"></i>
+                    <span>交通仿真</span>
+                </button>
+                <button id="control-button-3" class="play-pause-button">
+                    <i class="fas fa-play"></i>
+                    <span>定向发布策略应用</span>
+                </button>
+                <button id="control-button-4" class="play-pause-button">
+                    <i class="fas fa-play"></i>
+                    <span>性能验证</span>
+                </button>
+            </div>
+            <div id="terminal">
+                <div class="terminal-title">终端</div>
+                <div class="terminal-content"></div>
+            </div>
+        </div>
+        <div id="content-container">
+            <div id="display"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
