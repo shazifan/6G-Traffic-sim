@@ -1,0 +1,328 @@
+/* 全局样式 */
+body {
+    font-family: "Microsoft YaHei", "Times New Roman", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* 固定顶部栏样式 */
+#fixed-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; /* 移除左右内边距 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.left-content {
+    display: flex;
+    align-items: center;
+    padding-left: 5%; /* 左侧内容的左边距 */
+}
+
+#fixed-bar img {
+    width: 160px;
+    margin-right: 20px;
+}
+
+#fixed-bar span {
+    font-size: 19.2px;
+    font-weight: bold;
+}
+
+.right-content {
+    text-align: right;
+    padding-right: 5%; /* 右侧内容的右边距，20%空隙加上原来的5%边距 */
+}
+
+.right-content span {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* 步骤栏样式 */
+#steps-bar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #8DECB4;
+    color: black;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+}
+
+#steps-bar span {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#steps-bar span:hover {
+    background-color: #41B06E;
+    transform: translateY(-2.4px);
+}
+
+.separator {
+    width: 1.6px;
+    height: 32px;
+    background: linear-gradient(to bottom, #ffffff00, #ffffff, #ffffff00);
+}
+
+/* 主容器样式 */
+#main-container {
+    display: flex;
+    margin-top: 112px;
+    height: calc(100vh - 112px);
+    background-color: #ffffff;
+}
+
+/* 固定侧边栏样式 */
+#fixed-panel {
+    width: 27%;
+    padding: 20px 10%;
+    background-color: #ffffff;
+    position: fixed;
+    top: 112px;
+    left: 0;
+    height: calc(100vh - 112px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+}
+
+/* 内容容器样式 */
+#content-container {
+    flex-grow: 1;
+    margin-left: 47%;
+    padding: 20px 10% 20px 0;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+
+/* 控制按钮容器样式 */
+#control-button-container {
+    margin-top: 1cm;
+    margin-bottom: 0px;
+}
+
+/* 播放/暂停按钮样式 */
+.play-pause-button {
+    background-color: #FFFAB7;
+    border: none;
+    color: black;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 14.4px;
+    font-weight: bold;
+    margin: 8px 0;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.play-pause-button:hover {
+    background-color: #FFF785;
+}
+
+.play-pause-button.completed {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.play-pause-button.completed:hover {
+    background-color: #45a049;
+}
+
+.play-pause-button i {
+    margin-right: 8px;
+}
+
+/* 终端样式 */
+#terminal {
+    background-color: #282c34;
+    color: #ffffff;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    height: calc(100% - 240px - 3cm - 10%);
+    overflow-y: auto;
+    margin-top: 10px;
+    margin-bottom: 10%;
+}
+
+.terminal-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.terminal-content {
+    height: calc(100% - 24px);
+    overflow-y: auto;
+}
+
+/* 显示区域样式 */
+#display {
+    width: 100%;
+    height: calc(100vh - 300px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1cm;
+    overflow-y: auto;
+}
+
+/* 进度条容器样式 */
+.progress-container {
+    width: 100%;
+    max-width: 100%;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin: 16px auto;
+    height: 16px;
+    overflow: hidden;
+}
+
+/* 进度条样式 */
+.progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0;
+    transition: width 0.3s;
+    border-radius: 8px;
+}
+
+/* 进度文字样式 */
+.progress-text {
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* 网格容器样式 */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+}
+
+/* 网格项样式 */
+.grid-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+}
+
+/* 图片和视频样式 */
+.grid-item img, .grid-item video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* 活动步骤样式 */
+.active-step {
+    background-color: #41B06E !important;
+    color: white !important;
+    font-weight: bold;
+    font-size: 17.6px !important;
+    transform: scale(1.24);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 内容标题样式 */
+.content-title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* 内容描述样式 */
+.content-description {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* 内容包装器样式 */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* 进度包装器样式 */
+.progress-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* 重要：第三步视频样式 */
+#step3-video {
+    width: 100%; /* 调整此值以改变视频大小 */
+    max-width: 800px; /* 设置最大宽度以避免在大屏幕上过大 */
+}
+
+/* 保留原有的 CSS 样式 */
+
+/* 添加复位按钮样式 */
+.reset-button {
+    background-color: #68D2E8;
+    border: none;
+    color: black; /* 将字体颜色改为黑色 */
+    font-weight: bold; /* 添加这行使字体加粗 */
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.reset-button:hover {
+    background-color: #4FA3B9;
+    transform: scale(1.05);
+}
+
+.reset-button i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+
+
+
